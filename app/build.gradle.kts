@@ -15,15 +15,24 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "Key", "\"d2615712db7e4a449d3113038241604&q=Almaty&dt\"")
+    }
+
+    buildFeatures{
+        buildConfig = true
     }
 
     buildTypes {
         release {
+            buildConfigField("String", "Key", "\"d2615712db7e4a449d3113038241604&q=Almaty&dt\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            buildConfigField("String", "Key", "\"d2615712db7e4a449d3113038241604&q=Almaty&dt\"")
         }
     }
     compileOptions {

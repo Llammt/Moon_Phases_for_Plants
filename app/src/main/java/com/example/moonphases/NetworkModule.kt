@@ -24,7 +24,8 @@ fun getCurrentDate() :String {
 
 @RequiresApi(Build.VERSION_CODES.N)
 fun getEndPoint() :String {
-    return "/v1/astronomy.json?key=d2615712db7e4a449d3113038241604&q=Almaty&dt=${getCurrentDate()}"
+    val key :String = BuildConfig.Key
+    return "/v1/astronomy.json?key=${key}=${getCurrentDate()}"
 }
 
 fun createRetrofitClient() : ApiService {
